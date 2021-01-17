@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{09698B6A-B38F-42E8-94D6-84B4AE4CD39D}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FacturacionLinea</RootNamespace>
+    <AssemblyName>FacturacionLinea</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <UpgradeBackupLocation />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Printing.v18.1.Core, Version=18.1.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v18.1.Core, Version=18.1.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.ASPxThemes.v18.1, Version=18.1.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.Resources.v18.1, Version=18.1.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NucleoBase">
+      <HintPath>..\..\..\..\..\..\AerolineasEjecutivas\Codigos\MexJet360_Produccion\ALE_MexJet\bin\NucleoBase.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="DevExpress.Web.Bootstrap.v18.1, Version=18.1.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Web.v18.1, Version=18.1.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v18.1, Version=18.1.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\common.css" />
+    <Content Include="Content\common.js" />
+    <Content Include="Content\dark\bootstrap.min.css" />
+    <Content Include="Content\dashboard.js" />
+    <Content Include="Content\demo-icons.css" />
+    <Content Include="Content\demo-icons.svg" />
+    <Content Include="Content\event-scheduling.js" />
+    <Content Include="Content\Icons\demo-1.svg" />
+    <Content Include="Content\Icons\demo-2.svg" />
+    <Content Include="Content\Icons\demo-3.svg" />
+    <Content Include="Content\Icons\demo-alert.svg" />
+    <Content Include="Content\Icons\demo-col.svg" />
+    <Content Include="Content\Icons\demo-del.svg" />
+    <Content Include="Content\Icons\demo-edit.svg" />
+    <Content Include="Content\Icons\demo-ex.svg" />
+    <Content Include="Content\Icons\demo-export.svg" />
+    <Content Include="Content\Icons\demo-filter.svg" />
+    <Content Include="Content\Icons\demo-left.svg" />
+    <Content Include="Content\Icons\demo-logo.svg" />
+    <Content Include="Content\Icons\demo-logout.svg" />
+    <Content Include="Content\Icons\demo-mail.svg" />
+    <Content Include="Content\Icons\demo-menu.svg" />
+    <Content Include="Content\Icons\demo-new.svg" />
+    <Content Include="Content\Icons\demo-right.svg" />
+    <Content Include="Content\Icons\demo-search-menu.svg" />
+    <Content Include="Content\Icons\demo-search-toolbar.svg" />
+    <Content Include="Content\Icons\demo-settings.svg" />
+    <Content Include="Content\Icons\demo-today.svg" />
+    <Content Include="Content\Icons\demo-user.svg" />
+    <Content Include="Content\light\bootstrap.min.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="frmConfiguracionEmpresa.aspx" />
+    <Content Include="frmDatosUsuario.aspx" />
+    <Content Include="frmQuienesSomos.aspx" />
+    <Content Include="frmSelTickets.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery.min.js" />
+    <Content Include="Scripts\popper.min.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Site.master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SwitcherResources\Content\bootstrap.min.css" />
+    <Content Include="SwitcherResources\Content\Cerulean\bootstrap.min.css" />
+    <Content Include="SwitcherResources\Content\Cosmo\bootstrap.min.css" />
+    <Content Include="SwitcherResources\Content\Cyborg\bootstrap.min.css" />
+    <Content Include="SwitcherResources\Content\Darkly\bootstrap.min.css" />
+    <Content Include="SwitcherResources\Content\Flatly\bootstrap.min.css" />
+    <Content Include="SwitcherResources\Content\Journal\bootstrap.min.css" />
+    <Content Include="SwitcherResources\Content\litera\bootstrap.min.css" />
+    <Content Include="SwitcherResources\Content\Lumen\bootstrap.min.css" />
+    <Content Include="SwitcherResources\Content\lux\bootstrap.min.css" />
+    <Content Include="SwitcherResources\Content\materia\bootstrap.min.css" />
+    <Content Include="SwitcherResources\Content\minty\bootstrap.min.css" />
+    <Content Include="SwitcherResources\Content\pages.css" />
+    <Content Include="SwitcherResources\Content\pulse\bootstrap.min.css" />
+    <Content Include="SwitcherResources\Content\Sandstone\bootstrap.min.css" />
+    <Content Include="SwitcherResources\Content\Simplex\bootstrap.min.css" />
+    <Content Include="SwitcherResources\Content\sketchy\bootstrap.min.css" />
+    <Content Include="SwitcherResources\Content\Slate\bootstrap.min.css" />
+    <Content Include="SwitcherResources\Content\solar\bootstrap.min.css" />
+    <Content Include="SwitcherResources\Content\Spacelab\bootstrap.min.css" />
+    <Content Include="SwitcherResources\Content\Superhero\bootstrap.min.css" />
+    <Content Include="SwitcherResources\Content\themes.css" />
+    <Content Include="SwitcherResources\Content\United\bootstrap.min.css" />
+    <Content Include="SwitcherResources\Content\Yeti\bootstrap.min.css" />
+    <Content Include="SwitcherResources\Scripts\bootstrap.min.js" />
+    <Content Include="SwitcherResources\Scripts\jquery-3.1.1.js" />
+    <Content Include="SwitcherResources\Scripts\popper.min.js" />
+    <Content Include="SwitcherResources\Themes.xml" />
+    <Content Include="UserControls\Header.ascx" />
+    <Content Include="UserControls\HeaderTitle.ascx" />
+    <Content Include="UserControls\Navigation.ascx" />
+    <Content Include="Web.config" />
+    <Content Include="FactMaster.Master" />
+    <Content Include="SwitcherResources\Content\LICENSE" />
+    <Content Include="Content\demo-icons.eot" />
+    <Content Include="Content\demo-icons.ttf" />
+    <Content Include="Content\demo-icons.woff" />
+    <Content Include="Content\demo-icons.woff2" />
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Clases\Utils.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DomainModel\DBDatosUsuario.cs" />
+    <Compile Include="DomainModel\DBBase.cs" />
+    <Compile Include="DomainModel\DBConfiguracionEmpresa.cs" />
+    <Compile Include="DomainModel\DBEmpresa.cs" />
+    <Compile Include="DomainModel\DBQuienesSomos.cs" />
+    <Compile Include="DomainModel\DBSeleccionTickets.cs" />
+    <Compile Include="DomainModel\DBTicket.cs" />
+    <Compile Include="FactMaster.Master.cs">
+      <DependentUpon>FactMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FactMaster.Master.designer.cs">
+      <DependentUpon>FactMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="frmConfiguracionEmpresa.aspx.cs">
+      <DependentUpon>frmConfiguracionEmpresa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmConfiguracionEmpresa.aspx.designer.cs">
+      <DependentUpon>frmConfiguracionEmpresa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmDatosUsuario.aspx.cs">
+      <DependentUpon>frmDatosUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmDatosUsuario.aspx.designer.cs">
+      <DependentUpon>frmDatosUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmQuienesSomos.aspx.cs">
+      <DependentUpon>frmQuienesSomos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmQuienesSomos.aspx.designer.cs">
+      <DependentUpon>frmQuienesSomos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmSelTickets.aspx.cs">
+      <DependentUpon>frmSelTickets.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmSelTickets.aspx.designer.cs">
+      <DependentUpon>frmSelTickets.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\IBaseView.cs" />
+    <Compile Include="Interfaces\IViewConfiguracionEmpresa.cs" />
+    <Compile Include="Interfaces\IViewDatosUsuario.cs" />
+    <Compile Include="Interfaces\IViewSeleccionTickets.cs" />
+    <Compile Include="Interfaces\IViewTicket.cs" />
+    <Compile Include="Objetos\Empresa.cs" />
+    <Compile Include="Objetos\FacturacionTickets.cs" />
+    <Compile Include="Objetos\Timbrado.cs" />
+    <Compile Include="Objetos\UserIdentity.cs" />
+    <Compile Include="Objetos\UsuarioFacturante.cs" />
+    <Compile Include="Objetos\UsuariosPlataforma.cs" />
+    <Compile Include="Presenter\BasePresenter.cs" />
+    <Compile Include="Presenter\ConfiguracionEmpresa_Presenter.cs" />
+    <Compile Include="Presenter\DatosUsuario_Presenter.cs" />
+    <Compile Include="Presenter\SeleccionTicket_Presenter.cs" />
+    <Compile Include="Presenter\Ticket_Presenter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site.master.cs">
+      <DependentUpon>Site.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.master.designer.cs">
+      <DependentUpon>Site.master</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Header.ascx.cs">
+      <DependentUpon>Header.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\Header.ascx.designer.cs">
+      <DependentUpon>Header.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\HeaderTitle.ascx.cs">
+      <DependentUpon>HeaderTitle.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\HeaderTitle.ascx.designer.cs">
+      <DependentUpon>HeaderTitle.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Navigation.ascx.cs">
+      <DependentUpon>Navigation.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\Navigation.ascx.designer.cs">
+      <DependentUpon>Navigation.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>54414</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:54414/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
